@@ -1,5 +1,5 @@
 <?php require 'inc/head.php';
-if (isset($_POST['loginname'])) {
+if (isset($_POST['loginname']) && !empty($_POST['loginname'])) {
     $_SESSION['loginname'] = $_POST['loginname'];
     header('location: index.php');
 }
